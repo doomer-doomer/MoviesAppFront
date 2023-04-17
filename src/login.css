@@ -1,0 +1,191 @@
+
+
+.LoginMain{
+    display: flex;
+    width: 100%;
+    background-color: transparent;
+    height: 100vh;
+    overflow: hidden;
+    box-sizing: border-box;
+    
+}
+
+.mainilogoimg{
+    overflow: hidden;
+}
+
+.imageLogin{
+    overflow: hidden;
+}
+
+
+.LoginMain .LoginLayout{
+    width:15%;
+    z-index: 2;
+    display: block;
+    margin-left: auto;
+    border: none;
+    border-radius: 40px 0px 0px 40px;
+    background-color: white;
+    box-shadow: 0px 3px 7px rgba(0,0,0,0.5);
+    padding: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    overflow: hidden;
+    animation: slidein 1s ease-in-out both;
+    
+}
+
+.LoginMain .LoginLayout .loginlayalign{
+    display: flex;
+    position: absolute;
+    
+    overflow: hidden;
+    
+}
+
+.LoginMain .imageLogin{
+    display: flex;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    
+}
+.mainilogoimg{
+    display: absolute;
+    position: absolute;
+    left: -10%;
+    top: 0%;
+    z-index: 1;
+    animation: slideforlogo 1s ease-in-out both;
+}
+
+.mainilogoimg img{
+    width: 150px;
+}
+.LoginMain .imageLogin img{
+    
+    width: 100%;
+    height: 100vh;
+    
+    
+}
+
+
+
+.LoginMain .LoginLayout img{
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 30%;
+}
+.LoginMain .LoginLayout .LoginContent{
+    display: block;
+}
+
+.LoginMain .LoginLayout .LoginContent input{
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.LoginContent select{
+    border: none;
+    width: 82%;
+    padding: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0px 3px 7px rgba(0,0,0,0.5);
+    border-radius: 5px;
+
+}
+
+.forgetformlay .emailform{
+    margin: 5px;
+    display: grid;
+    grid-template-columns: 1fr 0.25fr;
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+.forgetformlay .passwordform{
+    margin: 5px;
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+.forgetformlay .emailform input{
+    display: block;
+    border: none;
+    font-size: 28px;
+    outline: none;
+}
+.forgetformlay .passwordform input{
+    display: block;
+    border: none;
+    font-size: 28px;
+    outline: none;
+}
+
+.forgetformlay .emailform button{
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+    transition: all 1s;
+}
+
+.forgetformlay .emailform button:hover{
+    background-color: lightblue;
+}
+.forgetformlay .passwordform button{
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+    transition: all 1s;
+    width: 50%;
+    margin-top: 10px;
+    padding: 10px;
+    text-align: left;
+}
+
+.forgetformlay .passwordform button:hover{
+    background-color: lightblue;
+}
+
+
+
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+        transform: scale(1);
+    }50%{
+        transform: rotate(360deg);
+        transform: scale(2);
+    }to{
+        transform: rotate(0deg);
+        transform: scale(1);
+    }
+}
+
+@keyframes slidein{
+    from{
+        width: 5%;
+    }to{
+       width: 20%;
+    }
+}
+
+@keyframes slideforlogo{
+    from{
+        left: -10%;
+    }to{
+       left: 3%;
+    }
+}
