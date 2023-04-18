@@ -26,7 +26,7 @@ export default function StartPage(){
          }
         try {
             const body = {email};
-            const response = await toast.promise(fetch("http://localhost:5000/email",{
+            const response = await toast.promise(fetch("https://chillaxdbaccess.onrender.com/email",{
                 method:"POST",
                 headers:{"Content-Type":"application/json"},
                 body:JSON.stringify(body)
