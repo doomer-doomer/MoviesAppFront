@@ -228,7 +228,7 @@ console.log(valgen.M)
       const getSubscriptionData=async()=>{
         try {
             
-            const subscriberData = await toast.promise(fetch("http://localhost:5000/subscribergetAllData",{
+            const subscriberData = await toast.promise(fetch("https://chillaxdbaccess.onrender.com/subscribergetAllData",{
                
             }),{
                 pending:"Checking credentials...",
@@ -286,7 +286,7 @@ console.log(valgen.M)
 
     const getAllData = async e =>{
         try {
-            const response = await toast.promise(fetch("http://localhost:5000/getuser"),{
+            const response = await toast.promise(fetch("https://chillaxdbaccess.onrender.com/getuser"),{
                 promise:"Fetching from Database...",
                 success:"Database Connected!",
                 error:"Something went wrong!"
@@ -377,7 +377,7 @@ console.log(valgen.M)
         event.preventDefault();
         const body = {user_id}
         try {
-            const response = await toast.promise(fetch("http://localhost:5000/delete",{
+            const response = await toast.promise(fetch("https://chillaxdbaccess.onrender.com/delete",{
                 method:"POST",
                 headers:{"Content-Type":"application/json"},
                 body:JSON.stringify(body)
@@ -456,7 +456,7 @@ console.log(valgen.M)
         }
         try {
             const body = {user_name,email,password,user_age,gender,contact,country};  
-            const response = await toast.promise(fetch("http://localhost:5000/signup",{
+            const response = await toast.promise(fetch("https://chillaxdbaccess.onrender.com/signup",{
                 method:"POST",
                 headers:{"Content-Type":"application/json"},
                 body:JSON.stringify(body)

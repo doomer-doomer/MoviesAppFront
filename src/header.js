@@ -61,7 +61,7 @@ const themes = React.useRef()
         try {
             const token = localStorage.getItem('jwt_token');
             if (!token) return;
-            const res = await fetch("http://localhost:5000/getspecific",{
+            const res = await fetch("https://chillaxdbaccess.onrender.com/getspecific",{
                 method:"POST",
                 headers: { Authorization: `Bearer ${token}`,
                 jwt_token: token
@@ -113,7 +113,7 @@ const themes = React.useRef()
         try {
             const token = localStorage.getItem('jwt_token');
             if (!token) return;
-            const getSubscriberData = await fetch("http://localhost:5000/subscriberAllData",{
+            const getSubscriberData = await fetch("https://chillaxdbaccess.onrender.com/subscriberAllData",{
                 method:"POST",
                 headers: { Authorization: `Bearer ${token}`,
                 jwt_token: token
@@ -142,7 +142,7 @@ const themes = React.useRef()
     const checkSubscription= async e =>{
         try {
             const token = localStorage.getItem('jwt_token');
-            const subscriberData = await fetch("http://localhost:5000/subscriberData",{
+            const subscriberData = await fetch("https://chillaxdbaccess.onrender.com/subscriberData",{
                 method:"POST",
                 headers: { Authorization: `Bearer ${token}`,
                 jwt_token: token
@@ -156,7 +156,7 @@ const themes = React.useRef()
             
             if(newtoken!=="Not Subscribed"){
                 try {
-                    const res = await fetch("http://localhost:5000/subscriptionCheck",{
+                    const res = await fetch("https://chillaxdbaccess.onrender.com/subscriptionCheck",{
                     method:"POST",
                     headers: { Authorization: `Bearer ${newtoken.subscription_id}`,
                     subscription_token: newtoken.subscription_id
@@ -283,7 +283,7 @@ const themes = React.useRef()
             const token = localStorage.getItem('jwt_token');
             if (!token) return;
             const body = {user_name,password,user_age,contact};  
-            const response = await toast.promise(fetch("http://localhost:5000/edit",{
+            const response = await toast.promise(fetch("https://chillaxdbaccess.onrender.com/edit",{
                 method:"POST",
                 headers:{"Content-Type":"application/json", Authorization: `Bearer ${token}`,jwt_token: token},
                 body:JSON.stringify(body)
@@ -347,7 +347,7 @@ const themes = React.useRef()
         try {
             const token = localStorage.getItem('jwt_token');
             if (!token) return;
-            const res = await fetch("http://localhost:5000/",{
+            const res = await fetch("https://chillaxdbaccess.onrender.com/",{
                 method:"GET",
                 headers: { Authorization: `Bearer ${token}`,
                 jwt_token: token

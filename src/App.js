@@ -61,7 +61,7 @@ function App() {
     try {
       const token = localStorage.getItem('jwt_token');
       if (!token) return;
-      const res = await fetch("http://localhost:5000/checkauth",{
+      const res = await fetch("https://chillaxdbaccess.onrender.com/checkauth",{
         method:"POST",
         headers: { Authorization: `Bearer ${token}`,
           jwt_token: token

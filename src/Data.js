@@ -94,7 +94,7 @@ export default function FetchData(props){
         try {
             const token = localStorage.getItem('jwt_token');
             if (!token) return;
-            const getSubscriberData = await fetch("http://localhost:5000/subscriberAllData",{
+            const getSubscriberData = await fetch("https://chillaxdbaccess.onrender.com/subscriberAllData",{
                 method:"POST",
                 headers: { Authorization: `Bearer ${token}`,
                 jwt_token: token

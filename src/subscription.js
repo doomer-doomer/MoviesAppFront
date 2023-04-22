@@ -112,7 +112,7 @@ const verfiyOTP = async event=>{
     try {
         
         const body = {mytoken}
-        const res = await toast.promise(fetch("http://localhost:5000/verifyotp",{
+        const res = await toast.promise(fetch("https://chillaxdbaccess.onrender.com/verifyotp",{
             method:"POST",
             body:JSON.stringify(body),
             headers: { Authorization: `Bearer ${mytoken}`,
@@ -185,7 +185,7 @@ const sendOTP= async (e)=>{
     try {
         const token = localStorage.getItem('jwt_token');
         if (!token) return;
-        const res = await toast.promise(fetch("http://localhost:5000/sendotp",{
+        const res = await toast.promise(fetch("https://chillaxdbaccess.onrender.com/sendotp",{
             method:"POST",
             headers: { Authorization: `Bearer ${token}`,
             jwt_token: token
@@ -201,7 +201,7 @@ const sendOTP= async (e)=>{
         const otp_to_check = parseRes.genOTP;
 
         const body = {otp_to_check}
-        const resp = await toast.promise(fetch("http://localhost:5000/verifyotp",{
+        const resp = await toast.promise(fetch("https://chillaxdbaccess.onrender.com/verifyotp",{
             method:"POST",
             body:JSON.stringify(body),
             headers: { Authorization: `Bearer ${otp_to_check}`,
@@ -256,7 +256,7 @@ const sendOTP= async (e)=>{
 const checkSubscription= async (e)=>{
     try {
         const token = localStorage.getItem('jwt_token');
-        const subscriberData = await fetch("http://localhost:5000/subscriberData",{
+        const subscriberData = await fetch("https://chillaxdbaccess.onrender.com/subscriberData",{
             method:"POST",
             headers: { Authorization: `Bearer ${token}`,
             jwt_token: token
@@ -270,7 +270,7 @@ const checkSubscription= async (e)=>{
         
         if(newtoken!=="Not Subscribed"){
             try {
-                const res = await fetch("http://localhost:5000/subscriptionCheck",{
+                const res = await fetch("https://chillaxdbaccess.onrender.com/subscriptionCheck",{
                 method:"POST",
                 headers: { Authorization: `Bearer ${newtoken.subscription_id}`,
                 subscription_token: newtoken.subscription_id
@@ -344,7 +344,7 @@ const subscribe = async (e)=>{
         if (!token) return;
         
         const body = {subscription_name,subscription_price}
-        const res = await toast.promise(fetch("http://localhost:5000/subscribe",{
+        const res = await toast.promise(fetch("https://chillaxdbaccess.onrender.com/subscribe",{
             method:"POST",
             body:JSON.stringify(body),
             headers: { Authorization: `Bearer ${token}`,
@@ -543,7 +543,7 @@ useEffect(()=>{
         <Modal.Body>
 
             <p>Welcome to Chillax!</p>
-            <p>These terms and conditions outline the rules and regulations for the use of Chillax Ltd.'s Website, located at http://localhost:3000/homepage.</p>
+            <p>These terms and conditions outline the rules and regulations for the use of Chillax Ltd.'s Website, located at http://chillax.onrender.com</p>
             <p>By accessing this website we assume you accept these terms and conditions. Do not continue to use Chillax if you do not agree to take all of the terms and conditions stated on this page.</p>
             <p>The following terminology applies to these Terms and Conditions, Privacy Statement and Disclaimer Notice and all Agreements: "Client", "You" and "Your" refers to you, the person log on this website and compliant to the Company's terms and conditions. "The Company", "Ourselves", "We", "Our" and "Us", refers to our Company. "Party", "Parties", or "Us", refers to both the Client and ourselves. All terms refer to the offer, acceptance and consideration of payment necessary to undertake the process of our assistance to the Client in the most appropriate manner for the express purpose of meeting the Client's needs in respect of provision of the Company's stated services, in accordance with and subject to, prevailing law of in. Any use of the above terminology or other words in the singular, plural, capitalization and/or he/she or they, are taken as interchangeable and therefore as referring to same.</p>
             <h3><strong>Cookies</strong></h3>
