@@ -186,7 +186,8 @@
 
 @media screen and (max-width:400px) {
     .startpgLay img{
-
+        background-size: cover;
+        width: 120%;
     }
 
     .slogan h1{

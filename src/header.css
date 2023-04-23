@@ -566,3 +566,186 @@ form .inp4{
         bottom: 100px;
     }
 }
+
+@media screen and (max-width:600px) {
+    
+    .navAlign{
+        width: 100%;
+        display: flex;
+        position:fixed;
+        z-index: 3;
+        opacity: 0.2;
+    }
+
+    .navAlign:hover{
+        opacity: 1;
+    }
+
+    .PageLogo{
+        background-position: center; 
+    }
+
+    .PageLogo img{
+        overflow: hidden;
+        background-color: transparent;
+        display: flex;
+        width: 200%;
+        margin-left: auto;
+        margin-right: auto;
+        
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        
+        margin-top: auto;
+        background-size: cover;
+        margin-bottom: auto;
+        
+        
+    }
+
+    .content_info{
+        display: block;
+        
+    }
+
+    .content_info .Info{
+        display: block;
+        position: relative;
+    }
+
+    .PageLogo{
+        width: 100%;
+    }
+
+    .PageLogo .basetitle{
+        z-index: 1;
+        width: 35vmax;
+        left: 10px;
+        bottom: 10px;
+    }
+
+    .navbar img{
+        padding: 5px;
+        width: 150px;
+        display: flex;
+        position: absolute;
+    
+    }
+    
+    .navbar .user_info{
+        margin-left: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    .navbar h3{
+        padding: 15px;
+        color: white;
+    }
+    
+    .navbar button{
+        margin-right: 10px;
+    }
+
+    .leftbtn{
+        width:15%;
+        display: absolute;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin-right: auto;
+        background-color: transparent;
+        z-index: 2;
+        border: none;
+        opacity: 50%;
+    }
+    
+    .rightbtn{
+        width: 15%;
+        display: absolute;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin-left: auto;
+        background-color: transparent;
+        z-index: 2;
+        border: none;
+        opacity: 50%;
+    }
+
+    .content_info .Info{
+        padding: 10px;
+        margin-left: 40px;
+        display: block;
+        position: absolute;
+        padding-left: 25px;
+        padding-right: 50px;
+        top: 5%;
+        color: rgb(255, 255, 255);
+        pointer-events:none;
+    }
+
+    .editform form{
+        display: block;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+        row-gap: 20px;
+        padding: 10px;
+    }
+
+    .editform form input{
+        border: none;
+        display: block;
+        font-size: 20px;
+        outline: none;
+    }
+
+    .nonchangaleinfo{
+        pointer-events: none;
+        display: block;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+        row-gap: 20px;
+        padding: 10px;
+    }
+    
+    .inp5{
+        display: block;
+        border: none;
+        outline: none;
+        font-size: 20px;
+        color: rgba(0, 0, 0, 0.5);
+    }
+
+    .genre{
+        display: flex;
+        font-size: x-large;
+        padding-left: 30px;
+        background-color: white;
+        box-shadow: 0px 3px 7px rgba(145, 145, 145, 0.3);
+        transition: all 1s;
+        z-index: 5;
+        padding: 10px;
+    }
+
+    .contentContainer{
+        display: flex;
+        position: relative;
+        transform: translateY(150px);
+        opacity: 0;
+        transition: 2s all ease;
+        background-color: rgba(var(--theme-color),1);
+        margin: 15px;
+        
+        margin-top: 30px;
+        border: none;
+        overflow: hidden;
+        border-radius: 20px;
+        box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.8);
+    }
+    
+
+}

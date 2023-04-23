@@ -531,7 +531,7 @@ const themes = React.useRef()
                         placeholder="Change Contact"
                     /></label>
 
-<Button variant="Secondary" onClick={handleClose}>Close</Button>
+
                     <Button type="submit" onClick={handleClose}>Save Changes</Button>
                 </form>
 

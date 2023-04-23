@@ -189,3 +189,99 @@
        left: 3%;
     }
 }
+
+@keyframes slideinsmall{
+    from{
+        width: 5%;
+    }to{
+       width: 70%;
+    }
+}
+
+@keyframes slideforlogosmall{
+    from{
+        left: -80%;
+    }to{
+       left: -15%;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .LoginMain .LoginLayout{
+        
+        width:100%;
+        z-index: 2;
+        display: block;
+        margin-left: auto;
+        border: none;
+        border-radius: 40px 0px 0px 40px;
+        background-color: white;
+        box-shadow: 0px 3px 7px rgba(0,0,0,0.5);
+        padding: 20px;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 30px;
+        padding-bottom: 10px;
+        overflow: hidden;
+        animation: slideinsmall 1s ease-in-out both;
+    }
+
+    .LoginMain{
+        display: absolute;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 100%;
+        background-color: transparent;
+        height: auto;
+        overflow: hidden;
+        box-sizing: border-box;
+        
+    }
+
+    .mainilogoimg{
+        display: absolute;
+        position: absolute;
+        left: -10%;
+        top: 0%;
+        z-index: 1;
+        animation: slideforlogosmall 1s ease-in-out both;
+    }
+
+    .mainilogoimg img{
+        width: 250px;
+        rotate: 270deg;
+    }
+
+    .forgetformlay .emailform{
+        margin: 5px;
+        display: grid;
+        grid-template-columns: 1fr 0.25fr;
+        row-gap: 10px;
+        column-gap: 10px;
+    }
+
+    .forgetformlay .passwordform{
+        margin: 5px;
+        display: block;
+       
+    }
+
+    .forgetformlay .emailform input{
+        display: block;
+        border: none;
+        font-size: 18px;
+        outline: none;
+    }
+    .forgetformlay .passwordform input{
+        display: block;
+        border: none;
+        font-size: 18px;
+        outline: none;
+    }
+    
+    
+}

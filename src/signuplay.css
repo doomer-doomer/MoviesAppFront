@@ -1,10 +1,11 @@
 .signuplay{
     display: absolute;
     z-index: 1;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: auto;
-    margin-bottom: auto;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
     border: none;
     border-radius: 20px;
     background-color: white;
@@ -60,5 +61,22 @@
         padding: 20px;
         border-radius: 20px;
         opacity: 1;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .signuplay{
+        display: absolute;
+        z-index: 1;
+        top:0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin-bottom: 0px;
+        border: none;
+        border-radius: 20px 20px 0px 0px;
+        background-color: white;
+        animation: anim 1s ease-in-out both;
+        box-shadow: 3px 0px 7px rgba(0,0,0,0.5);
     }
 }
