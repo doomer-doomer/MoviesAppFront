@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import React,{ useEffect, useState } from "react"
 import { BrowserRouter as Router,Link,Route,Routes } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 import Modal from 'react-bootstrap/Modal'
@@ -6,6 +6,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 
 export default function Login(){
@@ -24,6 +25,14 @@ export default function Login(){
     const handleShow = () => setShow(true);
 
     const navigate = useNavigate();
+
+    const trackimg = React.useRef()
+
+    let callback = (entries, observer) => {
+        entries.forEach((entry) => {
+          
+        });
+      };
 
     function reloadFun(){
         window.location.reload();
@@ -258,6 +267,17 @@ export default function Login(){
             }
       }
 
+      useEffect(()=>{
+        let observer = new IntersectionObserver(callback);
+        if(trackimg?.current){
+            observer.observe(trackimg.current);
+        }
+
+        return ()=>{
+            observer.disconnect()
+        }
+      },[])
+
     
 
     return(
@@ -266,10 +286,10 @@ export default function Login(){
            
            />
           <div className='mainilogoimg'>
-            <img src='chillax.png'></img>
+            <img src="chillax.png"></img>
            </div>
            <div className="imageLogin">
-                <img src="loginbg.jpg"></img>
+                <LazyLoadImage effect="blur" width="100%" src="loginbg.jpg"></LazyLoadImage>
             </div>
             <div className="LoginLayout">
                 

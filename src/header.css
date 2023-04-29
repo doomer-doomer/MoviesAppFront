@@ -265,8 +265,8 @@
 .contentContainer{
     display: flex;
     position: relative;
-    transform: translateY(150px);
-    opacity: 0;
+    /* transform: translateY(100px); */
+    opacity: 1;
     transition: 2s all ease;
     background-color: rgba(var(--theme-color),1);
     margin: 50px;
@@ -276,10 +276,10 @@
     box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.8);
 }
 
-.contentContainer.active{
+/* .contentContainer.active{
     transform: translateY(0);
     opacity: 1;
-  }
+  } */
 
 .genre{
     display: flex;
@@ -734,8 +734,8 @@ form .inp4{
     .contentContainer{
         display: flex;
         position: relative;
-        transform: translateY(150px);
-        opacity: 0;
+       
+        opacity: 1;
         transition: 2s all ease;
         background-color: rgba(var(--theme-color),1);
         margin: 15px;

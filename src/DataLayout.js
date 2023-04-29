@@ -1,14 +1,35 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import {ShimmerThumbnail} from "react-shimmer-effects";
+import {LazyLoadImage} from "react-lazy-load-image-component";
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 export default function Layout(items){
     const visibleRef = React.useRef()
     const [visible, setVisible] = useState(false);
     const [visible2, setVisible2] = useState(true);
     const {id} = useParams();
+    const trackimg = React.useRef()
+    const [inview,setview] = useState(false)
+
+    let callback = (entries, observer) => {
+        entries.forEach((entry) => {
+          setview(true)
+        });
+      };
+
+    useEffect(()=>{
+        let observer = new IntersectionObserver(callback);
+        if(trackimg?.current){
+            observer.observe(trackimg.current);
+        }
+
+        return ()=>{
+            observer.disconnect()
+        }
+    },[])
     
 
     const showElement = () => {
@@ -60,17 +81,27 @@ export default function Layout(items){
                     
                         <div className="imageContainer" onClick={()=>items.mytoggle(items.title,items.logo,items.bgimage,items.episodeCount,items.rating,items.isvisible,items.cast,items.des,items.id,items.seasons,items.episode,items.pic)}>
         
-                            <div className="imageLogo" onMouseEnter={showElement} onMouseLeave={hideElement}>
-                            <img className="logoimg" src={items.logo}></img>
+                            {inview ? <div className="imageLogo" onMouseEnter={showElement} onMouseLeave={hideElement}>
+                            <LazyLoadImage className="logoimg" src={items.logo}/>
                             
                             {/* <img className="myimg" src={items.bgimage}></img> */}
-                             {items.bgimage ? <img className="myimg" src={items.bgimage}></img>: <ShimmerThumbnail height={250} rounded />}
+                             
+                             <LazyLoadImage className="myimg" effect="blur" src={items.bgimage}/>
+
+                               
+                            </div> : 
+                            <div className="imageLogo" onMouseEnter={showElement} onMouseLeave={hideElement}>
+                            {/* <img className="logoimg" src={items.logo}></img> */}
+                            
+                            {/* <img className="myimg" src={items.bgimage}></img> */}
+                             
+                             <img ref={trackimg}></img>
+                             <ShimmerThumbnail height={350}></ShimmerThumbnail>
 
                                
                             </div>
-                            <div className="Image">
-                               
-                            </div>
+                            }
+                            
                         </div>
                        
                         {visible && <div className="aboutInfo">

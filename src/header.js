@@ -42,6 +42,9 @@ const [greet,setgreet] = useState("");
 const themes = React.useRef()
 
 
+
+
+
     document.documentElement.style.setProperty("--theme-color", "var(--redwhite)")
     function mygetVal(val){
         document.documentElement.style.setProperty("--theme-color", "var(--"+val.target.value+ ")")
@@ -364,6 +367,8 @@ const themes = React.useRef()
         
     }
 
+   
+
 
 
     useEffect(()=>{
@@ -372,6 +377,7 @@ const themes = React.useRef()
         setgreet(greeting);
         getData();
         checkSubscription();
+        
     },[]);
    
 

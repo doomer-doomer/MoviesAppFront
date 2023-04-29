@@ -4,6 +4,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export default function Signup(){
     const [user_name,setusername] = useState("");
@@ -136,7 +137,7 @@ export default function Signup(){
            </div>
            <div className="imageLogin">
           
-            <img src="loginbg.jpg"></img>
+           <LazyLoadImage effect="blur" width="100%" src="loginbg.jpg"></LazyLoadImage>
            
             </div>
 

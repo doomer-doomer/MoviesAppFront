@@ -1,13 +1,15 @@
 import './App.css';
 import './card.css'
 import './header.css'
-import FinalLayout from './FinalLayout';
+import { CSSProperties } from "react";
+import ClipLoader from "react-spinners/ClipLoader";
+//import FinalLayout from './FinalLayout';
 import { BrowserRouter as Router,Route,Routes,Redirect, Navigate } from 'react-router-dom';
 import SingleLay from './SingleLayout';
 import './singleLayout.css'
 import Login from './login';
 import './login.css'
-import { useEffect, useState } from 'react';
+import { Suspense, lazy, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Signup from './signup';
 import AdminPage from './Admin';
@@ -20,12 +22,16 @@ import './startpage.css'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './admin.css'
+import "./load.css"
 import './signuplay.css'
 import './DataLayout.css'
 import Subcribe from './subscription';
 import './subscription.css';
 import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button';
+import Load from './loading';
+
+
 
 let newTitle = new Array()
 export function Mytoggle (title,logo,img,ep,rating,isvisible){
@@ -46,7 +52,7 @@ export function Mytoggle (title,logo,img,ep,rating,isvisible){
   
 }
 
-
+const FinalLayout = lazy(()=>import('./FinalLayout'))
 
 
 function App() {
@@ -151,13 +157,13 @@ function App() {
           
             <ToastContainer/>
             <Routes>
-              <Route path='/Homepage' element={isAuthorized? <FinalLayout/>:<Login/>}></Route> 
+              <Route path='/Homepage' element={isAuthorized?<Suspense fallback={<Load/>}> <FinalLayout/></Suspense>:<Login/>}></Route> 
               <Route path='/Login' element={!isAuthorized ? <Login/> : <Middle/>}></Route> 
               <Route path='/Signup' element={!isAuthorized ? <Signup/> : <Middle/>}></Route>
-              <Route path='/Admin' element={<AdminPage/>}></Route>    
-              <Route path='/' element={!isAuthorized ? <StartPage/> : <Middle/>}/>
+              <Route path='/Admin' element={<Suspense fallback={<Load/>}><AdminPage/></Suspense>}></Route>    
+              <Route path='/' element={!isAuthorized ?<Suspense fallback={<Load/>}><StartPage/></Suspense> : <Middle/>}/>
               <Route path='/middle' element={<Middle/>}></Route>
-              <Route path='/subscription' element={isAuthorized?<Subcribe/>:<Login/>}></Route>
+              <Route path='/subscription' element={isAuthorized?<Suspense fallback={<Load/>}><Subcribe/></Suspense>:<Login/>}></Route>
             </Routes>
 
             

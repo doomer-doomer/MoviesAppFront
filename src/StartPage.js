@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default function StartPage(){
 
@@ -79,11 +80,11 @@ export default function StartPage(){
                
             />
             <div className="headerstartpg">
-                <img src="chillax.png"></img>
+                <LazyLoadImage effect="blur" src="chillax.png"></LazyLoadImage>
                 <button onClick={teleport}>Login</button>
             </div>
             <div className="startpgLay">
-                <img src="redbg.jpg" width="100%"></img>
+                <LazyLoadImage effect="blur" width="100%" src="redbg.jpg"></LazyLoadImage>
             </div>
 
             <div className="slogan">

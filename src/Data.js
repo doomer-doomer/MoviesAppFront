@@ -6,6 +6,7 @@ import season from "./season";
 import episodes from "./episodes";
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const ApiKey = "8cd5fdfdbdmsh1e9c0bce5756f43p1d9321jsn04a4bd150890"
 const Host = "streaming-availability.p.rapidapi.com"
@@ -36,6 +37,9 @@ export default function FetchData(props){
     const scroll13 = React.useRef()
     const scroll14 = React.useRef()
     const scroll15 = React.useRef()
+
+    const trackimg = React.useRef()
+    const [inview,setview] = useState(false)
 
     const [infovisible,setinfovisible] = useState(false);
 
@@ -1043,7 +1047,8 @@ const mystry = Mysteries.map(titles=>{
         
         return <Layout
         
-        logo = {titles.jawSummary.logoImage.url}
+         logo = {titles.jawSummary.logoImage.url}
+        
         bgimage = {titles.jawSummary.backgroundImage.url}
         title = {titles.jawSummary.title}
 
@@ -1231,9 +1236,26 @@ const mystry = Mysteries.map(titles=>{
 
       window.addEventListener("scroll", reveal);
 
+      let callback = (entries, observer) => {
+        entries.forEach((entry) => {
+          setview(true)
+        });
+      };
+
       useEffect(()=>{
         reveal();
         allowances();
+
+        let observer = new IntersectionObserver(callback);
+        if(trackimg?.current){
+            observer.observe(trackimg.current);
+        }
+
+        return ()=>{
+            observer.disconnect()
+        }
+
+        
       },[]);
     /*
      const getData = async (url,host) =>{
@@ -1262,6 +1284,11 @@ const mystry = Mysteries.map(titles=>{
      */
 
     // runApiQueries();
+
+
+      
+      
+      
     return(
 
         <div>
@@ -1307,12 +1334,10 @@ const mystry = Mysteries.map(titles=>{
                     
                         <div className="PageLogo">
                             
-                            {!infovisible && <img src={title} className="basetitle"></img>}
+                            {!infovisible && inview ? <LazyLoadImage src={title} className="basetitle"/>:<img ref={trackimg}></img>}
                         
-                        <div className="imageSection" onMouseEnter={()=> setinfovisible(true)} onMouseLeave={()=> setinfovisible(false)}>
-                            
-                            
-                            <img  className="backimg" src={loadimg} width="100%" ></img>
+                        <div className="imageSection" onMouseEnter={()=> setinfovisible(true)} onMouseLeave={()=> setinfovisible(false)}> 
+                            {inview ? <LazyLoadImage className="backimg" effect="blur" src={loadimg} width='100%'></LazyLoadImage> : <img ref={trackimg}></img>}
                             
                         </div>
                         
