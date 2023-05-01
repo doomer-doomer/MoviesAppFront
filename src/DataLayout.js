@@ -82,7 +82,7 @@ export default function Layout(items){
                         <div className="imageContainer" onClick={()=>items.mytoggle(items.title,items.logo,items.bgimage,items.episodeCount,items.rating,items.isvisible,items.cast,items.des,items.id,items.seasons,items.episode,items.pic)}>
         
                             {inview ? <div className="imageLogo" onMouseEnter={showElement} onMouseLeave={hideElement}>
-                            <LazyLoadImage className="logoimg" src={items.logo}/>
+                            {!visible && <LazyLoadImage className="logoimg" src={items.logo}/>}
                             
                             {/* <img className="myimg" src={items.bgimage}></img> */}
                              

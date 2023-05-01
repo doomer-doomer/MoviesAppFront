@@ -78,6 +78,7 @@
     overflow-x: hidden;
 }
 
+
 .layer7{
     display: flex;
     overflow-x: hidden;
@@ -141,7 +142,7 @@
     z-index: 1;
     position: absolute;
     width: 80%;
-    margin-top: 100px;
+    margin-top: 180px;
     margin-left: 30px;
     opacity: 100%;
     transition: 1s;
@@ -153,16 +154,21 @@
 }
 
 .aboutInfo{
+    display: absolute;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
     flex: 1;
     pointer-events: none;
     z-index: 2;
-    width: 350px;
+    width: 550px;
     transition: all 1s;
-    background-color: white;
-    color: rgba(var(--theme-color),1);
+    background-color: transparent;
+    color: white;
     border: none;
-    border-radius: 0px 10px 10px 0px;
-    box-shadow: 0px 3px 7px rgba(0,0,0,0.5);
     overflow: hidden;
 }
 
@@ -205,8 +211,7 @@
 .imageLogo .myimg{
     opacity: 100%;
     border: none;
-    
-    
+    object-fit: contain;
     width: 550px;
     transform: scale(1);
     transition: 1s all;
@@ -216,22 +221,23 @@
 }
 
 
-
-
 .imageContainer{
     position: relative;
-    width: 550px;
+    width: 350px;
     background-position: center;
-    background-size: cover;
     overflow: hidden;
     border: none;
     border-radius: 10px;
-    transition: 1s;
+    transition: 1s all;
+}
+
+.imageContainer:hover{
+    width: 550px;
+    opacity: 0.8;
 }
 
 .logoimg{
     position: absolute;
-    
 }
 
 
@@ -351,7 +357,7 @@
 
     .imageContainer{
         position: relative;
-        width: 350px;
+        width: 300px;
         background-position: center;
         background-size: cover;
         background-color: rgba(var(--theme-color),1);
@@ -359,17 +365,32 @@
         border-radius: 10px;
     }
 
+    .imageContainer:hover{
+        width: 400px;
+    }
+
     .imageLogo .myimg{
         opacity: 100%;
         border: none;
         border-radius: 0px 0px 20px 20px;
-        padding: 10px;
+        
         width: 350px;
-        transform: scale(1.9);
+        transform: scale(1);
         transition: 0.5s;
         background-position: center;
         background-size: cover;
     
+    }
+
+    .imageLogo .logoimg{
+        z-index: 1;
+        position: absolute;
+        width: 80%;
+        margin-top: 100px;
+        margin-left: 30px;
+        opacity: 100%;
+        transition: 1s;
+        pointer-events: none;
     }
 
     .card_layout{
@@ -393,14 +414,5 @@
         
     }
 
-    .logoimg{
-        display: absolute;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-        margin-bottom: 20px;
-    }
+    
 }

@@ -1560,7 +1560,7 @@ const mystry = Mysteries.map(titles=>{
             </div>
             </div>}
 
-            {threemonth && <div className="contentContainer">
+            {/* {threemonth && <div className="contentContainer">
             <div className="arrangeLayout">
             <div className="genre">
                     <h2>Adult</h2>
@@ -1573,7 +1573,7 @@ const mystry = Mysteries.map(titles=>{
              
                 
             </div>
-            </div>}
+            </div>} */}
 
             {threemonth && <div className="contentContainer">
             <div className="arrangeLayout">
