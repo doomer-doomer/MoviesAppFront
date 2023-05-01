@@ -268,325 +268,314 @@ export default function FetchData(props){
     }
 
     function swipeRight1(){
-        var scrollAmount = 0;
-        var slideTimer = setInterval(function(){
-            scroll1.current.scrollLeft += 62;
-            scrollAmount += 10;
-            if(scrollAmount >= 100){
-                window.clearInterval(slideTimer);
-            }
-        }, 50);
-    }
+        
+        // var slideTimer = setInterval(function(){
+        //     scroll1.current.scrollLeft += 62;
+        //     scrollAmount += 10;
+        //     if(scrollAmount >= 100){
+        //         window.clearInterval(slideTimer);
+        //     }
+        // }, 50);
+
+        const container = scroll1.current;
+
+        const slidein = container.scrollLeft + 650;
+        container.scrollTo({
+            left:slidein,
+            behavior : "smooth",
+        })
+        }
 
     function swipeRight2(){
-        var scrollAmount = 0;
-        var slideTimer = setInterval(function(){
-            scroll2.current.scrollLeft += 62;
-            scrollAmount += 10;
-            if(scrollAmount >= 100){
-                window.clearInterval(slideTimer);
-            }
-        }, 50);
+        // var scrollAmount = 0;
+        // var slideTimer = setInterval(function(){
+        //     scroll2.current.scrollLeft += 62;
+        //     scrollAmount += 10;
+        //     if(scrollAmount >= 100){
+        //         window.clearInterval(slideTimer);
+        //     }
+        // }, 50);
+        const container = scroll2.current;
+
+        const slidein = container.scrollLeft + 650;
+        container.scrollTo({
+            left:slidein,
+            behavior : "smooth",
+        })
     }
 
     function swipeRight3(){
-        var scrollAmount = 0;
-        var slideTimer = setInterval(function(){
-            scroll3.current.scrollLeft += 62;
-            scrollAmount += 10;
-            if(scrollAmount >= 100){
-                window.clearInterval(slideTimer);
-            }
-        }, 50);
+        const container = scroll3.current;
+
+        const slidein = container.scrollLeft + 650;
+        container.scrollTo({
+            left:slidein,
+            behavior : "smooth",
+        })
     }
 
     function swipeRight4(){
-        var scrollAmount = 0;
-        var slideTimer = setInterval(function(){
-            scroll4.current.scrollLeft += 62;
-            scrollAmount += 10;
-            if(scrollAmount >= 100){
-                window.clearInterval(slideTimer);
-            }
-        }, 50);
+        const container = scroll4.current;
+
+        const slidein = container.scrollLeft + 650;
+        container.scrollTo({
+            left:slidein,
+            behavior : "smooth",
+        })
     }
 
     function swipeRight5(){
-        var scrollAmount = 0;
-        var slideTimer = setInterval(function(){
-            scroll5.current.scrollLeft += 62;
-            scrollAmount += 10;
-            if(scrollAmount >= 100){
-                window.clearInterval(slideTimer);
-            }
-        }, 50);
+        const container = scroll5.current;
+
+        const slidein = container.scrollLeft + 650;
+        container.scrollTo({
+            left:slidein,
+            behavior : "smooth",
+        })
     }
 
     function swipeRight6(){
-        var scrollAmount = 0;
-        var slideTimer = setInterval(function(){
-            scroll6.current.scrollLeft += 62;
-            scrollAmount += 10;
-            if(scrollAmount >= 100){
-                window.clearInterval(slideTimer);
-            }
-        }, 50);
+        const container = scroll6.current;
+
+        const slidein = container.scrollLeft + 650;
+        container.scrollTo({
+            left:slidein,
+            behavior : "smooth",
+        })
     }
 
     function swipeRight7(){
-        var scrollAmount = 0;
-        var slideTimer = setInterval(function(){
-            scroll7.current.scrollLeft += 62;
-            scrollAmount += 10;
-            if(scrollAmount >= 100){
-                window.clearInterval(slideTimer);
-            }
-        }, 50);
+        const container = scroll7.current;
+
+        const slidein = container.scrollLeft + 650;
+        container.scrollTo({
+            left:slidein,
+            behavior : "smooth",
+        })
     }
 
     function swipeRight8(){
-        var scrollAmount = 0;
-        var slideTimer = setInterval(function(){
-            scroll8.current.scrollLeft += 62;
-            scrollAmount += 10;
-            if(scrollAmount >= 100){
-                window.clearInterval(slideTimer);
-            }
-        }, 50);
+        const container = scroll8.current;
+
+        const slidein = container.scrollLeft + 650;
+        container.scrollTo({
+            left:slidein,
+            behavior : "smooth",
+        })
     }
 
     function swipeRight9(){
-        var scrollAmount = 0;
-        var slideTimer = setInterval(function(){
-            scroll9.current.scrollLeft += 62;
-            scrollAmount += 10;
-            if(scrollAmount >= 100){
-                window.clearInterval(slideTimer);
-            }
-        }, 50);
+        const container = scroll9.current;
+
+        const slidein = container.scrollLeft + 650;
+        container.scrollTo({
+            left:slidein,
+            behavior : "smooth",
+        })
     }
 
     function swipeRight10(){
-        var scrollAmount = 0;
-        var slideTimer = setInterval(function(){
-            scroll10.current.scrollLeft += 62;
-            scrollAmount += 10;
-            if(scrollAmount >= 100){
-                window.clearInterval(slideTimer);
-            }
-        }, 50);
+        const container = scroll10.current;
+
+        const slidein = container.scrollLeft + 650;
+        container.scrollTo({
+            left:slidein,
+            behavior : "smooth",
+        })
     }
 
     function swipeRight11(){
-        var scrollAmount = 0;
-        var slideTimer = setInterval(function(){
-            scroll11.current.scrollLeft += 62;
-            scrollAmount += 10;
-            if(scrollAmount >= 100){
-                window.clearInterval(slideTimer);
-            }
-        }, 50);
+        const container = scroll11.current;
+
+        const slidein = container.scrollLeft + 650;
+        container.scrollTo({
+            left:slidein,
+            behavior : "smooth",
+        })
     }
 
     function swipeRight12(){
-        var scrollAmount = 0;
-        var slideTimer = setInterval(function(){
-            scroll12.current.scrollLeft += 62;
-            scrollAmount += 10;
-            if(scrollAmount >= 100){
-                window.clearInterval(slideTimer);
-            }
-        }, 50);
+        const container = scroll12.current;
+
+        const slidein = container.scrollLeft + 650;
+        container.scrollTo({
+            left:slidein,
+            behavior : "smooth",
+        })
     }
 
     function swipeRight13(){
-        var scrollAmount = 0;
-        var slideTimer = setInterval(function(){
-            scroll13.current.scrollLeft += 62;
-            scrollAmount += 10;
-            if(scrollAmount >= 100){
-                window.clearInterval(slideTimer);
-            }
-        }, 50);
+        const container = scroll13.current;
+
+        const slidein = container.scrollLeft + 650;
+        container.scrollTo({
+            left:slidein,
+            behavior : "smooth",
+        })
     }
 
     function swipeRight14(){
-        var scrollAmount = 0;
-        var slideTimer = setInterval(function(){
-            scroll14.current.scrollLeft += 62;
-            scrollAmount += 10;
-            if(scrollAmount >= 100){
-                window.clearInterval(slideTimer);
-            }
-        }, 50);
+        const container = scroll14.current;
+
+        const slidein = container.scrollLeft + 650;
+        container.scrollTo({
+            left:slidein,
+            behavior : "smooth",
+        })
     }
 
 
     const swipeLeft1 = () =>{
         
-        var scrollAmount = 0;
-        var slideTimer = setInterval(function(){
-            scroll1.current.scrollLeft -= 62;
-            scrollAmount += 10;
-            if(scrollAmount >= 100){
-                window.clearInterval(slideTimer);
-            }
-        }, 50);
+        const container = scroll1.current;
+
+        const slidein = container.scrollLeft - 650;
+        container.scrollTo({
+            left:slidein,
+            behavior : "smooth",
+        })
     }
 
     const swipeLeft2 = () =>{
         
-        var scrollAmount = 0;
-        var slideTimer = setInterval(function(){
-            scroll2.current.scrollLeft -= 62;
-            scrollAmount += 10;
-            if(scrollAmount >= 100){
-                window.clearInterval(slideTimer);
-            }
-        }, 50);
+        const container = scroll2.current;
+
+        const slidein = container.scrollLeft - 650;
+        container.scrollTo({
+            left:slidein,
+            behavior : "smooth",
+        })
     }
 
     const swipeLeft3 = () =>{
         
-        var scrollAmount = 0;
-        var slideTimer = setInterval(function(){
-            scroll3.current.scrollLeft -= 62;
-            scrollAmount += 10;
-            if(scrollAmount >= 100){
-                window.clearInterval(slideTimer);
-            }
-        }, 50);
+        const container = scroll3.current;
+
+        const slidein = container.scrollLeft - 650;
+        container.scrollTo({
+            left:slidein,
+            behavior : "smooth",
+        })
     }
 
     const swipeLeft4 = () =>{
         
-        var scrollAmount = 0;
-        var slideTimer = setInterval(function(){
-            scroll4.current.scrollLeft -= 62;
-            scrollAmount += 10;
-            if(scrollAmount >= 100){
-                window.clearInterval(slideTimer);
-            }
-        }, 50);
+        const container = scroll4.current;
+
+        const slidein = container.scrollLeft - 650;
+        container.scrollTo({
+            left:slidein,
+            behavior : "smooth",
+        })
     }
 
     const swipeLeft5 = () =>{
         
-        var scrollAmount = 0;
-        var slideTimer = setInterval(function(){
-            scroll5.current.scrollLeft -= 62;
-            scrollAmount += 10;
-            if(scrollAmount >= 100){
-                window.clearInterval(slideTimer);
-            }
-        }, 50);
+        const container = scroll5.current;
+
+        const slidein = container.scrollLeft - 650;
+        container.scrollTo({
+            left:slidein,
+            behavior : "smooth",
+        })
     }
 
     const swipeLeft6 = () =>{
         
-        var scrollAmount = 0;
-        var slideTimer = setInterval(function(){
-            scroll6.current.scrollLeft -= 62;
-            scrollAmount += 10;
-            if(scrollAmount >= 100){
-                window.clearInterval(slideTimer);
-            }
-        }, 50);
+        const container = scroll6.current;
+
+        const slidein = container.scrollLeft - 650;
+        container.scrollTo({
+            left:slidein,
+            behavior : "smooth",
+        })
     }
 
     const swipeLeft7 = () =>{
         
-        var scrollAmount = 0;
-        var slideTimer = setInterval(function(){
-            scroll7.current.scrollLeft -= 62;
-            scrollAmount += 10;
-            if(scrollAmount >= 100){
-                window.clearInterval(slideTimer);
-            }
-        }, 50);
+        const container = scroll7.current;
+
+        const slidein = container.scrollLeft - 650;
+        container.scrollTo({
+            left:slidein,
+            behavior : "smooth",
+        })
     }
     const swipeLeft8 = () =>{
         
-        var scrollAmount = 0;
-        var slideTimer = setInterval(function(){
-            scroll8.current.scrollLeft -= 62;
-            scrollAmount += 10;
-            if(scrollAmount >= 100){
-                window.clearInterval(slideTimer);
-            }
-        }, 50);
+        const container = scroll8.current;
+
+        const slidein = container.scrollLeft - 650;
+        container.scrollTo({
+            left:slidein,
+            behavior : "smooth",
+        })
     }
 
     const swipeLeft9 = () =>{
         
-        var scrollAmount = 0;
-        var slideTimer = setInterval(function(){
-            scroll9.current.scrollLeft -= 62;
-            scrollAmount += 10;
-            if(scrollAmount >= 100){
-                window.clearInterval(slideTimer);
-            }
-        }, 50);
+        const container = scroll9.current;
+
+        const slidein = container.scrollLeft - 650;
+        container.scrollTo({
+            left:slidein,
+            behavior : "smooth",
+        })
     }
 
     const swipeLeft10 = () =>{
         
-        var scrollAmount = 0;
-        var slideTimer = setInterval(function(){
-            scroll10.current.scrollLeft -= 62;
-            scrollAmount += 10;
-            if(scrollAmount >= 100){
-                window.clearInterval(slideTimer);
-            }
-        }, 50);
+        const container = scroll10.current;
+
+        const slidein = container.scrollLeft - 650;
+        container.scrollTo({
+            left:slidein,
+            behavior : "smooth",
+        })
     }
 
     const swipeLeft11 = () =>{
         
-        var scrollAmount = 0;
-        var slideTimer = setInterval(function(){
-            scroll11.current.scrollLeft -= 62;
-            scrollAmount += 10;
-            if(scrollAmount >= 100){
-                window.clearInterval(slideTimer);
-            }
-        }, 50);
+        const container = scroll11.current;
+
+        const slidein = container.scrollLeft - 650;
+        container.scrollTo({
+            left:slidein,
+            behavior : "smooth",
+        })
     }
 
     const swipeLeft12 = () =>{
         
-        var scrollAmount = 0;
-        var slideTimer = setInterval(function(){
-            scroll12.current.scrollLeft -= 62;
-            scrollAmount += 10;
-            if(scrollAmount >= 100){
-                window.clearInterval(slideTimer);
-            }
-        }, 50);
+        const container = scroll12.current;
+
+        const slidein = container.scrollLeft - 650;
+        container.scrollTo({
+            left:slidein,
+            behavior : "smooth",
+        })
     }
 
     const swipeLeft13 = () =>{
         
-        var scrollAmount = 0;
-        var slideTimer = setInterval(function(){
-            scroll13.current.scrollLeft -= 62;
-            scrollAmount += 10;
-            if(scrollAmount >= 100){
-                window.clearInterval(slideTimer);
-            }
-        }, 50);
+        const container = scroll13.current;
+
+        const slidein = container.scrollLeft - 650;
+        container.scrollTo({
+            left:slidein,
+            behavior : "smooth",
+        })
     }
 
     const swipeLeft14 = () =>{
         
-        var scrollAmount = 0;
-        var slideTimer = setInterval(function(){
-            scroll14.current.scrollLeft -= 62;
-            scrollAmount += 10;
-            if(scrollAmount >= 100){
-                window.clearInterval(slideTimer);
-            }
-        }, 50);
+        const container = scroll14.current;
+
+        const slidein = container.scrollLeft - 650;
+        container.scrollTo({
+            left:slidein,
+            behavior : "smooth",
+        })
     }
 
 

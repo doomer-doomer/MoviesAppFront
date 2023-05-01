@@ -106,12 +106,12 @@ export default function Layout(items){
                        
                         {visible && <div className="aboutInfo">
                         <div className="heading">
-                                <h2>{items.title}</h2>
-                                <h4>{items.lang}</h4>
-                                <div className="stats">
-                                    <h5>Episodes {items.episodeCount}</h5>
-                                    <h5>{items.rating}</h5>
-                                </div>
+                                <h3>{items.title}</h3>
+                                <h5>{items.lang}</h5>
+                                {/* <div className="stats">
+                                    <p>Episodes {items.episodeCount}</p>
+                                    <p>{items.rating}</p>
+                                </div> */}
                                 
                             {/*<p>{items.cast}</p>*/}
                             <p><LongText content={items.des} limit={100}></LongText></p>
