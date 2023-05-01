@@ -1,4 +1,4 @@
-import React, { useEffect, useState ,useRef } from "react";
+import React, { useEffect, useState ,useRef, Suspense } from "react";
 import Layout from './DataLayout';
 import datas from "./datas";
 import SingleLay from "./SingleLayout";
@@ -7,6 +7,9 @@ import episodes from "./episodes";
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import Carousel from 'react-bootstrap/Carousel';
+import Load from "./loading";
+import { ShimmerThumbnail } from "react-shimmer-effects";
 
 const ApiKey = "8cd5fdfdbdmsh1e9c0bce5756f43p1d9321jsn04a4bd150890"
 const Host = "streaming-availability.p.rapidapi.com"
@@ -160,7 +163,7 @@ export default function FetchData(props){
 
 
     function next(){
-        newcounter(newc=>newc = ++newc)
+        newcounter(newc=>newc+1)
         if(counter<297 && counter>0){
             newimg(checkImg=>checkImg = gen())
             newTitle(checkTitle=>checkTitle = titletext())
@@ -176,7 +179,7 @@ export default function FetchData(props){
     }
 
     function back(){
-        newcounter(newc=>newc = --newc)
+        newcounter(newc=>newc-1)
         if(counter<297 && counter>0){
 
             newimg(checkImg=>checkImg = gen())
@@ -193,7 +196,7 @@ export default function FetchData(props){
     }
     
 
-    function mydesk(){
+    function mydesk(counter){
         const img = datas.map(datas=>{
             return datas = datas.jawSummary.currentContextualSynopsis.text
         })
@@ -202,7 +205,7 @@ export default function FetchData(props){
         return myrandomImg
     }
 
-    function mygenre(){
+    function mygenre(counter){
         const img = datas.map(datas=>{
             return datas = datas.jawSummary.genres.map(mygen=>mygen.name).join(",")
         })
@@ -212,7 +215,7 @@ export default function FetchData(props){
     }
 
     
-    function gen(){
+    function gen(counter){
         const img = datas.map(datas=>{
             return datas = datas.jawSummary.backgroundImage.url
         })
@@ -222,7 +225,7 @@ export default function FetchData(props){
     }
 
 
-    function titletext(){
+    function titletext(counter){
         const text = datas.map(datas=>{
             return datas = datas.jawSummary.logoImage.url
         })
@@ -233,7 +236,7 @@ export default function FetchData(props){
     }
 
     
-    function mytext(){
+    function mytext(counter){
         const text = datas.map(datas=>{
             return datas = datas.jawSummary.title
         })
@@ -1246,6 +1249,7 @@ const mystry = Mysteries.map(titles=>{
         reveal();
         allowances();
 
+       
         let observer = new IntersectionObserver(callback);
         if(trackimg?.current){
             observer.observe(trackimg.current);
@@ -1253,6 +1257,7 @@ const mystry = Mysteries.map(titles=>{
 
         return ()=>{
             observer.disconnect()
+            //clearInterval(interval);
         }
 
         
@@ -1326,10 +1331,128 @@ const mystry = Mysteries.map(titles=>{
             */}
             {visbile2 && 
             <div className="parentContent">
+
+
                 
 
                 <div className="content_info">
-                    
+                <Carousel>
+
+<Carousel.Item>
+  <Suspense fallback={<Load/>}>
+ <LazyLoadImage
+    className="carosal"
+    src={gen(counter)}
+    alt="First slide"
+    effect="blur"
+    width="100%"
+  />
+ 
+  
+  <Carousel.Caption>
+    <h1>{mytext(counter)}</h1>
+    <p>{mydesk(counter)}</p>
+    <small>{mygenre(counter)}</small>
+  </Carousel.Caption>
+  </Suspense>
+</Carousel.Item>
+
+<Carousel.Item>
+<Suspense fallback={<Load/>}>
+  <LazyLoadImage
+    className="carosal"
+    src={gen(counter+1)}
+    alt="Second slide"
+    effect="blur"
+    width="100%"
+  />
+ 
+
+  <Carousel.Caption>
+    <h1>{mytext(counter+1)}</h1>
+    <p>{mydesk(counter+1)}</p>
+    <small>{mygenre(counter+1)}</small>
+  </Carousel.Caption>
+  </Suspense>
+</Carousel.Item>
+
+
+<Carousel.Item>
+<Suspense fallback={<Load/>}>
+  <LazyLoadImage
+    className="carosal"
+    src={gen(counter+2)}
+    alt="Third slide"
+    effect="blur"
+    width="100%"
+  />
+
+  <Carousel.Caption>
+    <h3>{mytext(counter+2)}</h3>
+    <p>
+    {mydesk(counter+2)}
+    </p>
+    <small>{mygenre(counter+2)}</small>
+  </Carousel.Caption>
+  </Suspense>
+</Carousel.Item>
+
+<Carousel.Item>
+<Suspense fallback={<Load/>}>
+  <LazyLoadImage
+    className="carosal"
+    src={gen(counter+3)}
+    alt="First slide"
+    effect="blur"
+    width="100%"
+  />
+  <Carousel.Caption>
+    <h1>{mytext(counter+3)}</h1>
+    <p>{mydesk(counter+3)}</p>
+    <small>{mygenre(counter+3)}</small>
+  </Carousel.Caption>
+  </Suspense>
+</Carousel.Item>
+
+<Carousel.Item>
+<Suspense fallback={<Load/>}>
+  <LazyLoadImage
+    className="carosal"
+    src={gen(counter+4)}
+    alt="Second slide"
+    effect="blur"
+    width="100%"
+  />
+ 
+
+  <Carousel.Caption>
+    <h1>{mytext(counter+4)}</h1>
+    <p>{mydesk(counter+4)}</p>
+    <small>{mygenre(counter+4)}</small>
+ </Carousel.Caption>
+ </Suspense>
+</Carousel.Item>
+
+
+<Carousel.Item>
+<Suspense fallback={<Load/>}>
+  <LazyLoadImage
+    className="carosal"
+    src={gen(counter+5)}
+    alt="Third slide"
+    effect="blur"
+    width="100%"
+  />
+
+  <Carousel.Caption>
+    <h3>{mytext(counter+5)}</h3>
+    <p>{mydesk(counter+5)}</p>
+    <small>{mygenre(counter+5)}</small>
+  </Carousel.Caption>
+  </Suspense>
+</Carousel.Item>
+</Carousel>
+                    {/*
                     {!infovisible && <button onClick={back} className="leftbtn"><img src="right-arrow3.png" width="100%"></img></button>}
                     
                         <div className="PageLogo">
@@ -1360,6 +1483,7 @@ const mystry = Mysteries.map(titles=>{
                         {!infovisible && <button onClick={next} className="rightbtn"><img src="right-arrow2.png" width="100%"></img></button>}
 
 
+                    */}
                     </div>
 
 

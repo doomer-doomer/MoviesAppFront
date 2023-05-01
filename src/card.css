@@ -304,6 +304,15 @@
     width: 100%;
 }
 
+.carosal{
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size:cover;
+    object-fit: cover;  
+    
+}
+
 @media screen and (max-width:600px) {
     .swipeLeft{
         position: absolute;
