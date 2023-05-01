@@ -1388,7 +1388,7 @@ const mystry = Mysteries.map(titles=>{
   />
 
   <Carousel.Caption>
-    <h3>{mytext(counter+2)}</h3>
+    <h1>{mytext(counter+2)}</h1>
     <p>
     {mydesk(counter+2)}
     </p>
@@ -1445,7 +1445,7 @@ const mystry = Mysteries.map(titles=>{
   />
 
   <Carousel.Caption>
-    <h3>{mytext(counter+5)}</h3>
+    <h1>{mytext(counter+5)}</h1>
     <p>{mydesk(counter+5)}</p>
     <small>{mygenre(counter+5)}</small>
   </Carousel.Caption>
